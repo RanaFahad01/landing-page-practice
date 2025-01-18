@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* Use font family 'Roboto' */
+
+/* Variables */
+:root {
+    /* Font family */
+    --FF: 'Roboto', serif;
+
+    --HERO-MAIN-TEXT: 48px 900;
+    --HERO-MAIN-SIZE: 48px;
+    --HERO-MAIN-COLOR: #F9FAF8;
+    --HERO-MAIN-WGHT: 900;
+
+    --HERO-SEC-TEXT: 18px;
+    --HERO-SEC-SIZE: 18px;
+    --HERO-SEC-COLOR: #E5E7EB;
+
+    --HEADER-LOGO-TEXT: 24px;
+    --HEADER-LOGO-COLOR: #F9FAF8;
+
+    /* Also bgcolor for call to action */
+    --BTN-COLOR: #3882F6;
+
+    --INFO-HEADER-TEXT: 36px 900;
+    --INFO-HEADER-SIZE: 36px;
+    --INFO-HEADER-COLOR: #1F2937;
+    --INFO-HEADER-WGHT: 900;
+
+    --QUOTE-SECTION-BGCOLOR: #E5E7EB;
+    --QUOTE-TEXT: 36px light italic;
+    --QUOTE-TEXT-COLOR: #1F2937;
+}
