@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* Use font family 'Roboto' */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Variables */
 :root {
     /* Font family */
     --FF: 'Roboto', serif;
 
-    --HERO-MAIN-TEXT: 48px 900;
-    --HERO-MAIN-SIZE: 48px;
+    --HERO-MAIN-SIZE: 40px;
     --HERO-MAIN-COLOR: #F9FAF8;
     --HERO-MAIN-WGHT: 900;
 
@@ -20,13 +25,229 @@
 
     /* Also bgcolor for call to action */
     --BTN-COLOR: #3882F6;
+    --DARK-BGCOLOR: #1F2937;
 
     --INFO-HEADER-TEXT: 36px 900;
-    --INFO-HEADER-SIZE: 36px;
+    --INFO-HEADER-SIZE: 30px;
     --INFO-HEADER-COLOR: #1F2937;
     --INFO-HEADER-WGHT: 900;
 
     --QUOTE-SECTION-BGCOLOR: #E5E7EB;
-    --QUOTE-TEXT: 36px light italic;
+    --QUOTE-TEXT-SIZE: 30px;
     --QUOTE-TEXT-COLOR: #1F2937;
+}
+
+html,body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--FF);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--DARK-BGCOLOR);
+    gap: 75px;
+
+    min-height: 300px;
+    padding: 8px 120px 50px 120px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: var(--HEADER-LOGO-TEXT);
+    color: var(--HEADER-LOGO-COLOR);
+}
+
+header a {
+    text-decoration: none;
+    color: var(--HERO-SEC-COLOR);
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.hero-content {
+    display: flex;
+    /* border: 1px solid red; */
+}
+
+.signup-prompt {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    border: inherit;
+}
+
+.signup-header {
+    font-size: var(--HERO-MAIN-SIZE);
+    color: var(--HERO-MAIN-COLOR);
+    font-weight: var(--HERO-MAIN-WGHT);
+}
+
+.signup-body {
+    font-size: var(--HERO-SEC-SIZE);
+    color: var(--HERO-SEC-COLOR);
+    font-weight: 250;
+    padding-right: 15px;
+    padding-bottom: 5px;
+}
+
+button.signup-button {
+    background-color: var(--BTN-COLOR);
+    display: inline-block;
+    width: fit-content;
+
+    font-size: 1rem;
+    color: var(--HERO-MAIN-COLOR);
+    border-radius: 5px;
+    border: none;
+
+    padding: 5px 30px;
+
+    transition: background-color ease-in 0.25s;
+}
+
+button.signup-button:hover {
+    background-color: #1a6ff8;
+}
+
+.image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border: inherit;
+
+    min-height: 150px;
+    background-color: rgb(102, 102, 102);
+    color: whitesmoke;
+}
+
+.random-info {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+
+    padding: 40px 30px 60px 30px;
+    align-items: center;
+    gap: 30px;
+}
+
+.random-info h2 {
+    font-size: var(--INFO-HEADER-SIZE);
+    color: var(--INFO-HEADER-COLOR);
+    font-weight: var(--INFO-HEADER-WGHT);
+}
+
+.random-info-container {
+    display: flex;
+}
+
+.illustration {
+    height: 150px;
+    width: 150px;
+    border: 3px solid var(--BTN-COLOR);
+    border-radius: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    gap: 10px;
+    margin-inline: 15px;
+}
+
+.thor-quote {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    background-color: var(--QUOTE-SECTION-BGCOLOR);
+
+    align-items: center;
+    justify-content: center;
+    padding-inline: 200px;
+}
+
+.thor-quote-text {
+    color: var(--QUOTE-TEXT-COLOR);
+    font-size: var(--QUOTE-TEXT-SIZE);
+    font-style: italic;
+    font-weight: 250;
+
+    margin-top: 15px;
+}
+
+.attribution {
+    /* border: 1px solid red; */
+    align-self: flex-end;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.call-to-action-container {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.call-to-action {
+    background-color: var(--BTN-COLOR);
+    color: var(--HERO-SEC-COLOR);
+    display: flex;
+    /* border: 1px solid red; */
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+
+    padding: 30px 60px;
+    margin: 20px;
+
+}
+
+button.call-to-action-button {
+    background-color: var(--BTN-COLOR);
+    display: inline-block;
+    width: fit-content;
+
+    font-size: 1rem;
+    color: var(--HERO-SEC-COLOR);
+    border-radius: 5px;
+    border: 1px solid var(--HERO-SEC-COLOR);
+
+    padding: 5px 30px;
+
+    transition: all ease-in 0.25s;
+}
+
+button.call-to-action-button:hover {
+    background-color: var(--HERO-SEC-COLOR);
+    color: var(--BTN-COLOR);
+    border: 1px solid var(--BTN-COLOR);
+}
+
+footer {
+    background-color: var(--DARK-BGCOLOR);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: var(--HERO-SEC-COLOR);
 }
